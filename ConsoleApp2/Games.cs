@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ConsoleApp2
 {
@@ -502,15 +498,15 @@ namespace ConsoleApp2
         }
 
         public static void Game6() {
-
+            // soon
         }
 
         public static void Game7() {
-
+            //soon
         }
 
         public static void Game8() {
-
+            //soon
         }
 
         public static void CoinFlip() {
