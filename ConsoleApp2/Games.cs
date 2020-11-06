@@ -497,8 +497,59 @@ namespace ConsoleApp2
             Console.Clear();
         }
 
-        public static void Game6() {
-            // soon
+        public static void MathGame() {
+            Random rng1 = new Random();
+
+            double answer = 0;
+            Random r = new Random();
+
+            int numOne = rng1.Next(1, 101);
+            int numTwo = rng1.Next(1, 101);
+            while (numTwo == numOne) {
+                numTwo = rng1.Next(1, 101);
+            }
+
+            char[] option = {'+','-','*','/' };
+            char math = option[r.Next(option.Length)];
+
+
+
+            //for (int i = 0; i < math.Length; i++) {
+            //    math[i] = option[r.Next(option.Length)];
+            //}
+            
+
+            Console.WriteLine($"What is {numOne} {math} {numTwo}?");
+
+            switch (math) {
+                case '+':
+                    answer = numOne + numTwo;
+                    break;
+                case '-':
+                    answer = numOne - numTwo;
+                    break;
+                case '*':
+                    answer = numOne * numTwo;
+                    break;
+                case '/':
+                    answer = Math.Round((double)numOne / (double)numTwo, 2);
+                    break;
+                default:
+                    break;
+            }
+
+            int plyAnswer = Convert.ToInt32(Console.ReadLine());
+
+            if (plyAnswer == answer) {
+                Console.WriteLine("Correct! +1 point");
+                winsTotal++;
+            }
+            else {
+                Console.WriteLine("Incorrect. Better luck next time.");
+            }
+            Console.ReadKey();
+            Console.Clear();
+
         }
 
         public static void Game7() {

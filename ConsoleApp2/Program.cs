@@ -14,8 +14,8 @@ namespace ConsoleApp2
                     $"  - 2. Rock Paper Scissors\n" +
                     $"  - 3. Roll The Dice\n" +
                     $"  - 4. Mini DND - WIP\n" +
-                    $"  - 5. Quiz - WIP\n" +
-                    $"  - 6. \n" +
+                    $"  - 5. 200 IQ Super Quiz\n" +
+                    $"  - 6. Random Math Questions\n" +
                     $"  - 7. \n" +
                     $"  - 8. \n" +
                     $"  - 9. Heads or Tails\n" +
@@ -44,7 +44,7 @@ namespace ConsoleApp2
                         break;
                     case 6:
                         Console.Clear();
-                        Games.Game6();
+                        Games.MathGame();
                         break;
                     case 7:
                         Console.Clear();
