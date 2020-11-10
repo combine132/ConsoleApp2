@@ -542,7 +542,7 @@ namespace ConsoleApp2
             Console.ReadKey();
             Console.Clear();
         }
-
+        
         public static void Game7() {
             //soon
         }
