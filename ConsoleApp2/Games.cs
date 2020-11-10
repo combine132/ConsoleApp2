@@ -56,7 +56,6 @@ namespace ConsoleApp2
 
             do {
                 try {
-
                     Random rng = new Random();
 
                     int enemyChoice = rng.Next(1, 4);
@@ -512,13 +511,6 @@ namespace ConsoleApp2
             char[] option = {'+','-','*','/' };
             char math = option[r.Next(option.Length)];
 
-
-
-            //for (int i = 0; i < math.Length; i++) {
-            //    math[i] = option[r.Next(option.Length)];
-            //}
-            
-
             Console.WriteLine($"What is {numOne} {math} {numTwo}?");
 
             switch (math) {
@@ -549,7 +541,6 @@ namespace ConsoleApp2
             }
             Console.ReadKey();
             Console.Clear();
-
         }
 
         public static void Game7() {
