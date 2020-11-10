@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.IO;
 
 namespace ConsoleApp2
 {
@@ -543,8 +543,40 @@ namespace ConsoleApp2
             Console.Clear();
         }
         
-        public static void Game7() {
-            //soon
+        public static void HangMan() {
+            bool runloop = true;
+            Console.WriteLine("Welcome, take a guess at some random letters and see if you win.\nNo points will be gained\nType 0 to exit");
+            string path = @"C:\Users\simo17e5\source\repos\HanMan\HanMan\WordList.txt";
+            string[] listwords = File.ReadAllLines(path);
+            Random randGen = new Random();
+            var idx = randGen.Next(0, 851);
+            string mysteryWord = listwords[idx];
+            char[] guess = new char[mysteryWord.Length];
+            Console.Write("Please enter your guess: ");
+
+            for (int p = 0; p < mysteryWord.Length; p++) {
+                guess[p] = ('-');
+            }
+
+            while (runloop) {
+                try {
+                    char playerGuess = char.Parse(Console.ReadLine());
+                    for (int i = 0; i < mysteryWord.Length; i++) {
+                        if (playerGuess == mysteryWord[i])
+                            guess[i] = playerGuess;
+                        else if (playerGuess == '0') {
+                            runloop = false;
+                        }
+                    }
+                    Console.WriteLine(guess);
+                }
+                catch (Exception) {
+                    Console.WriteLine("One letter only.");
+                }
+            }
+            Console.WriteLine("Exiting..");
+            Console.ReadKey();
+            Console.Clear();
         }
 
         public static void Game8() {

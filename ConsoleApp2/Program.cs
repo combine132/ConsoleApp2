@@ -16,7 +16,7 @@ namespace ConsoleApp2
                     $"  - 4. Mini DND - WIP\n" +
                     $"  - 5. 200 IQ Super Quiz\n" +
                     $"  - 6. Random Math Questions\n" +
-                    $"  - 7. \n" +
+                    $"  - 7. Hangman - no points\n" +
                     $"  - 8. \n" +
                     $"  - 9. Heads or Tails\n" +
                     $"  - 0. Exit");
@@ -50,7 +50,7 @@ namespace ConsoleApp2
                             break;
                         case 7:
                             Console.Clear();
-                            Games.Game7();
+                            Games.HangMan();
                             break;
                         case 8:
                             Console.Clear();
